@@ -3,7 +3,7 @@
 client_id = "d983d34a8b73b9496418490b35c04ba6"
 name = "wishlist-app"
 handle = "wishlist-app-132"
-application_url = "https://surgical-surround-death-serial.trycloudflare.com"
+application_url = "https://specification-island-gary-handbags.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://surgical-surround-death-serial.trycloudflare.com/auth/callback",
-  "https://surgical-surround-death-serial.trycloudflare.com/auth/shopify/callback",
-  "https://surgical-surround-death-serial.trycloudflare.com/api/auth/callback"
+  "https://specification-island-gary-handbags.trycloudflare.com/auth/callback",
+  "https://specification-island-gary-handbags.trycloudflare.com/auth/shopify/callback",
+  "https://specification-island-gary-handbags.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
