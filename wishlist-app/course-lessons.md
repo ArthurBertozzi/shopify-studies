@@ -34,3 +34,44 @@ A remix app have 3 main parts:
 - Example: Form submission
 
 - Component: The component that will be rendered
+
+## Prisma data example
+
+```
+Settings model example
+
+model Settings {
+  id           Int    @id @default(autoincrement())
+  name         String
+  description  String?
+}
+
+```
+
+- At app.settings.jsx we can get the data and insert the data as below
+
+```
+export async function loader() {
+  // get data from database
+  let settings = await db.settings.findFirst();
+  console.log(settings);
+  return json(settings);
+}
+
+export async function action({ request }) {
+  let settings = await request.formData();
+  settings = Object.fromEntries(settings);
+
+  await db.settings.upsert({
+    where: { id: 1 },
+    update: settings,
+    create: settings,
+  });
+
+  return json(settings);
+}
+
+  // ... in the component
+  const settings = useLoaderData();
+  const [formState, setFormState] = useState(settings);
+```
