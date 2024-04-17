@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "d7a9d2f2efb2d25041caeafc58469344"
+name = "qr-code-app"
+handle = "qr-code-app-255"
+application_url = "https://ce-grace-worcester-sophisticated.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "brtzzi-store.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://ce-grace-worcester-sophisticated.trycloudflare.com/auth/callback",
+  "https://ce-grace-worcester-sophisticated.trycloudflare.com/auth/shopify/callback",
+  "https://ce-grace-worcester-sophisticated.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
